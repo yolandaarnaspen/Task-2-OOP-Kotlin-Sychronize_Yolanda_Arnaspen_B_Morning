@@ -10,7 +10,15 @@ Lengkapi fungsi myProfile di bawah ini dengan membuat variabel dengan ketentuan 
 Dan Cetak setiap variabel ke layar saat variable myProfile di panggil
  */
 fun myProfile() {
+    val firstName: String = "Yolanda"
+    val lastName: String = "Arnaspen"
+    val age: Int = 21
+    val isSingle: Boolean = true
 
+    println("Nama Depan: $firstName")
+    println("Nama Belakang: $lastName")
+    println("Umur: $age")
+    println("Status: ${if (isSingle) "Single" else "Not Single"}")
 }
 
 
@@ -19,6 +27,9 @@ fun myProfile() {
  *  Lengkapi fungsi di bawah ini agar dapat mencetak nilai dari parameter-parameter yang ada dengan fungsi println
  */
 fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
+    println("Group ID: $groupId")
+    println("Group Members: $groupMember")
+    println("Session: $session")
     return ""
 }
 
@@ -29,8 +40,9 @@ fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
  *
  */
 fun myTeam(): List<Any> {
-
-    return listOf()
+    val teamMembers = listOf("Faiz Ridho", "Yudha Yuliarta Perdana", "Kholishotun Ni'mah", "Aulia Wira Yudha Mustopa", "Yolanda Arnaspen")
+    println("Sychronize: $teamMembers")
+    return teamMembers
 }
 
 /**
@@ -41,10 +53,11 @@ fun myTeam(): List<Any> {
  *
  */
 fun totalMember(): Int {
-    val mentor = arrayOf<String>()
-    val countOfGroup = arrayOf<String>()
+    val mentors = arrayOf("Malik", "Reynaldi")
+    val groupMembers = arrayOf("Faiz Ridho", "Yudha Yuliarta Perdana", "Kholishotun Ni'mah", "Aulia Wira Yudha Mustopa", "Yolanda Arnaspen")
 
-    return 0
+    val total = mentors.size + groupMembers.size
+    return total
 }
 
 fun main() {
@@ -52,7 +65,7 @@ fun main() {
     myProfile()
 
     val myTeam = myTeam()
-    println("My team is: $myTeam")
+    println("Sychronize: $myTeam")
 
     val totalMember = totalMember()
     println("Total Member group : $totalMember")
@@ -62,6 +75,6 @@ fun main() {
      *  Ubah nilai argumen-argumen dari fungsi groupDetail di bawah ini sesuai dengan data group kamu
      *
      */
-    groupDetail("", listOf(), "")
+    groupDetail("210401069", listOf("Faiz Ridho", "Yudha Yuliarta Perdana", "Kholishotun Ni'mah", "Aulia Wira Yudha Mustopa", "Yolanda Arnaspen"), "Morning Session")
 
 }
